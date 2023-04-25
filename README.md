@@ -30,7 +30,8 @@ created by the .qmd file to live. This lives in a separate branch
 (gh-pages) in the docs folder. The file is manually dragged into the
 folder and renamed to index.html.
 
-We write basic output to the “output” folder.
+We write basic output to the “output” folder. We export a csv and a
+geopackage.
 
 ## Packages Used
 

@@ -133,13 +133,13 @@ mapview(pop_17_21_CR, zcol = "estimate") +
 
 ## Step 7: Using SF for Grouping
 
-In Step 5, we performed a "summarize" operation. This also used `sf` to summarize the geometry as well:
+In Step 5, we performed a "summarize" operation to collect the results for all municipalities. `sf` caused the sideeffect of summarizing the geometry as well:
 
 ```{r}
 mapview(pop_17_21_CR_tot)
 ```
 
-Such functionality can be useful if you wanted to aggregate by county or perhaps by Commuter Rail Zone.
+This can be frustrating if it wasn't intended--lots of small aggregation can cause performance issues. However, such functionality can be useful if you wanted to aggregate by county or perhaps by commuter rail zone. The resulting map would then match an accompanying table.
 
 ```{r}
 #| warning: false
@@ -192,4 +192,29 @@ gt::gt(pop_17_21_CR_zone_tot |>
          select(zone_mx,pop_total, pop_moe, pop_and_moe = pop_tot_moe_fmt)) |>
          gt::fmt_number(2, decimals = 0) |> 
          gt::fmt_number(3, decimals = 1)
+```
+
+We can also use a geopackage to write out the results to an open standard, in this case, a geopackage.
+
+```{r}
+#| message: false
+#| warning: false
+#| results: hide
+st_write(cr_stations_zn_ma, 
+         dsn = "../output/muni_pop_example.gpkg",
+         layer = "cr_stations_zn_ma",
+         delete_dsn = TRUE,
+         delete_layer = TRUE)
+
+st_write(pop_17_21_CR_zone_tot, 
+         dsn = "../output/muni_pop_example.gpkg",
+         layer = "muni_zones", 
+         delete_layer = TRUE)
+
+# We can now see that our geopackage features two layers.
+lyr <- st_layers("../output/muni_pop_example.gpkg")
+```
+
+```{r}
+lyr
 ```
