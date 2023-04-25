@@ -116,6 +116,8 @@ pop_17_21_CR_tot <- pop_17_21_CR |>
   mutate(pop_tot_moe_fmt = paste0(
     scales::comma(pop_total, accuracy = 1), " +/- ", 
     scales::comma(pop_moe, accuracy = 0.1)))
+
+write_csv(pop_17_21_CR_tot |> st_drop_geometry(), "../output/pop_17_21_CR_tot.csv")
 ```
 
 We now know that the 2017-2021 ACS data suggests there are `r pop_17_21_CR_tot$pop_tot_moe_fmt` people living in Massachusetts municipalities with MBTA commuter rail stations.

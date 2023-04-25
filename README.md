@@ -12,10 +12,11 @@ overview than I could provide.
 
 ## Structure
 
-There is a basic R script that can be sourced or can be run in an
-interactive, line-by-line fashion. Either way, the script will export
-the population for munis in MA that have a commuter rail station. A map
-should appear in the “Viewer” pane if you are using RStudio as your IDE.
+Within the analysis folder there is a basic R script that can be sourced
+or can be run in an interactive, line-by-line fashion. Either way, the
+script will export the population for munis in MA that have a commuter
+rail station. A map should appear in the “Viewer” pane if you are using
+RStudio as your IDE.
 
 The quarto document provides a way to intersperse code and text, tightly
 integrating the process we follow with relevant text. This way of
@@ -28,6 +29,8 @@ github sites functionality. This provides a place for the html document
 created by the .qmd file to live. This lives in a separate branch
 (gh-pages) in the docs folder. The file is manually dragged into the
 folder and renamed to index.html.
+
+We write basic output to the “output” folder.
 
 ## Packages Used
 
