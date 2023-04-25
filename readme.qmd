@@ -15,3 +15,12 @@ There is a basic R script that can be sourced or can be run in an interactive, l
 The quarto document provides a way to intersperse code and text, tightly integrating the process we follow with relevant text. This way of working is best handled in the [platform's documentation](https://quarto.org/).
 
 We also published the quarto doc using the github sites functionality. This provides a place for the html document created by the .qmd file to live.
+
+## Packages Used
+
+We use the following packages. I would not expect the versions to matter for the operations we are using in this contrived example.
+
+```{r}
+#| eval: false
+install.packages(tidyverse, sf, tidycensus, scales, mapview, gt)
+```

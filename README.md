@@ -26,3 +26,12 @@ documentation](https://quarto.org/).
 We also published the quarto doc using the github sites functionality.
 This provides a place for the html document created by the .qmd file to
 live.
+
+## Packages Used
+
+We use the following packages. I would not expect the versions to matter
+for the operations we are using in this contrived example.
+
+``` r
+install.packages(tidyverse, sf, tidycensus, scales, mapview, gt)
+```
