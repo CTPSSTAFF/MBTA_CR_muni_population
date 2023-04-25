@@ -22,9 +22,12 @@ integrating the process we follow with relevant text. This way of
 working is best handled in the [platform’s
 documentation](https://quarto.org/).
 
-We also published the quarto doc using the github sites functionality.
-This provides a place for the html document created by the .qmd file to
-live.
+We also [published the quarto
+doc](https://ctpsstaff.github.io/MBTA_CR_muni_population/) using the
+github sites functionality. This provides a place for the html document
+created by the .qmd file to live. This lives in a separate branch
+(gh-pages) in the docs folder. The file is manually dragged into the
+folder and renamed to index.html.
 
 ## Packages Used
 
