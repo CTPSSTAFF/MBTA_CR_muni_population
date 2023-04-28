@@ -4,7 +4,9 @@ format: gfm
 editor: visual
 ---
 
-This is a basic script that shows how we can use tools to open up the "analysis" part of geospatial work. In this case, the geospatial analysis is quite simple--merely an intersection and some basic dissolving of boundaries. The capabilities expand much farther. An exploration of the `sf` package's [page](https://r-spatial.github.io/sf/) will give a much more thorough overview than I could provide.
+This is a basic script that shows how we can use tools to open up the "analysis" part of geospatial work. In this case, the geospatial analysis is quite simple--merely an intersection and some basic dissolving of boundaries. The analysis itself takes shortcuts that we might not have taken if answering the question was the important part of this.
+
+The geospatial capabilities within the R world expand much farther than what's included here. An exploration of the `sf` package's [page](https://r-spatial.github.io/sf/) will give a much more thorough overview than I could provide.
 
 ## Structure
 
